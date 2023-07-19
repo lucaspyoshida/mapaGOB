@@ -65,7 +65,7 @@
         });  
 
 
-        $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1LjEPzpjoV4EBgX7PkQ0k2zjiWKBHk_O9-9i2cFISjZo/values/Dados!B3:F?key=AIzaSyBhEQXfLVvzi_rbsUpd1YHV6rwbJr-KSBs",function (data) {
+        $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1LjEPzpjoV4EBgX7PkQ0k2zjiWKBHk_O9-9i2cFISjZo/values/Dados!B5:F?key=AIzaSyBhEQXfLVvzi_rbsUpd1YHV6rwbJr-KSBs",function (data) {
             var v = acharduplicados(data.values);
             console.log(v);
             $(v).each(function() {
