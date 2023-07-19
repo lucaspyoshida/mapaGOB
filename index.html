@@ -16,23 +16,29 @@
         padding: 0;
       }
       #pac-input {
-        background-color: #fff;
+        background: none padding-box rgb(255, 255, 255);
+        border: 0px;
+        padding: 0px 23px;
+        position: relative;
+        text-align: lest;
+        height: 40px;
+        vertical-align: middle;
+        color: rgb(86, 86, 86);
         font-family: Roboto, Arial, sans-serif;
         font-size: 18px;
-        margin-left: 12px;
-        padding: 0 10px 0 10px;
-        width: 400px;
-        margin-top: 10px;
-        height: 40px;
-        border-style: hidden;
-        box-shadow: rgba(0, 0, 0, 0.75) 1px 1px 7px 0px;
-        border-radius: 3px;
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+        min-width: 60px;
+        margin-left: 10px;
+        margin-top: -5px;
+        width: 250px;
       }
     </style>
 </head>
 <body>
 <div id="map"></div>
-<input id="pac-input" class="controls" type="text" placeholder="Busca de localidade">
+<input id="pac-input" class="controls" type="text" placeholder="Busca...">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
       function initMap() {
@@ -42,7 +48,7 @@
         });
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        map.controls[google.maps.ControlPosition.LEFT_TOP].push(input);
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
           if (places.length == 0) {
